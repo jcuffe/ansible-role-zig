@@ -17,6 +17,8 @@
         dest: /usr/src
         list_files: true
       register: extract
+    - name: echo extraction result
+      command: "echo {{ extract.files }}; echo {{ extract.files[0] }}"
     - name: move extracted files to install directory
       command: "mv {{ extract.files[0] }} /usr/local/zig"
       args:
