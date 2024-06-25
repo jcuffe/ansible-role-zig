@@ -6,9 +6,9 @@
       file:
         path: /usr/local/zig
         state: absent
-    - name: fetch zig 0.11 tarball
+    - name: fetch zig 0.13 tarball
       get_url:
-        url: https://ziglang.org/download/0.11.0/zig-linux-x86_64-0.11.0.tar.xz
+        url: https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
         dest: /usr/src
       register: tarball
     - name: extract tarball contents
